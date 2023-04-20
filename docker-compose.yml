@@ -9,7 +9,7 @@ services:
   vite:
     tty: true
     image: iamteacher/vite:arm64
-    command: yarn dev --host --port 4000
+    command: yarn vite --host --port 4000
     ports:
       - 4000:4000
     volumes:
