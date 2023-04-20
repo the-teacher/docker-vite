@@ -1,0 +1,16 @@
+# docker compose -f docker-compose.yml up
+
+version: '3.9'
+
+name: vite_docker
+
+services:
+  # Port: 4000
+  vite:
+    tty: true
+    image: iamteacher/vite:arm64
+    command: yarn dev --host --port 4000
+    ports:
+      - 4000:4000
+    volumes:
+      - ./vite-project:/home/app
